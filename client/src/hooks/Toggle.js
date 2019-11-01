@@ -8,14 +8,14 @@ const Toggle = () => {
     setColorMode(!colorMode);
   };
   return (
-    <nav>
+    <div>
       <div className="color-mode__toggle">
-        <div
+        <div data-testid="divvy"
           onClick={toggleMode}
           className={colorMode ? "toggle toggled" : "toggle"}
-        />
+          />
       </div>
-    </nav>
+    </div>
   );
 };
 
