@@ -1,7 +1,7 @@
 import React from "react"
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
-import  { getByText } from "@testing-library/dom";
+// import { getByDisplayValue } from "@testing-library/dom";
 import Toggle from "./hooks/Toggle";
 
 afterEach(cleanup);
@@ -12,9 +12,15 @@ it("renders", () => {
 });
 
 it("tests", () => {
-    const { getByText } = render(<Toggle />);
+    const { getByTestId, getByText } = render(<Toggle />);
 
-    // expect(getByTestId("divvy")).toHaveClass("color-mode_toggle");
-    fireEvent.click(getByText("toggleMode"))
-    expect(getByText("toggleMode")).toHaveClass("toggle");
+    expect(getByTestId("divvy")).toHaveClass("toggle");
+    fireEvent.click(getByText("Toggle"))
+
 });
+
+// const { getByLabelText } = render(<Toggle />);
+// const container = document.body
+// const inputNode = getByLabelText(container, 'toggle', {
+//   selector: 'onClick',
+// })

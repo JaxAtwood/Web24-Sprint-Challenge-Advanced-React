@@ -14,6 +14,7 @@ const Toggle = () => {
           onClick={toggleMode}
           className={colorMode ? "toggle toggled" : "toggle"}
           />
+          Toggle
       </div>
     </div>
   );
