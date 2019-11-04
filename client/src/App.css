@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  /* border: solid red 1px; */
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -10,13 +12,14 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 90vh;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: purple; */
 }
 
 .App-link {
@@ -30,4 +33,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.color-mode__toggle {
+  background: #ffe6ff;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 38px;
+}
+
+.toggle {
+  background: magenta;
+  border-radius: 50px;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+} 
+
+.toggled {
+  left: 18px;
+}
+
+.color-mode {
+  color: purple;
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); 
+  /* height: 100%; */
 }
